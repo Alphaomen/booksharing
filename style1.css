@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body {
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	color: #505962;
+}
+
+.offset:before {
+	display: block;
+	content: block;
+	height: 4rem;
+	margin-top: -4rem;
+}
+
+/*--- Navigation --*/
+
+.navbar {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	background: rgba(0, 0, 0, 0.6)!important;
+}
+.navbar-brand img {
+	height: 4rem;
+}
+.navbar-nav li {
+	padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: white;
+	padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #1ebba3;
+}
+
+/*--- Landing Page --*/
+
+.home-inner {
+	background-image: url(img/lib.png);
+}
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 38%;
+	z-index: 1;
+	color: white;
+	text-transform: uppercase;
+}
+.caption h1 {
+	font-size: 3.8rem;
+	font-weight: 700;
+	letter-spacing: .3rem;
+	text-shadow: .1rem .1rem .8rem black;
+	padding-bottom: 1rem;
+}
+.caption h3 {
+	font-size: 2rem;
+	text-shadow: .1rem .1rem .5rem black;
+	padding-bottom: 1.6rem;
+}
+.btn-lg {
+	border-width: medium;
+	border-radius: 0;
+	padding: .6rem 1.3rem;
+	font-size: 1.1rem;
+}
+
+/* active */
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+    position: absolute;
+    height: 60%; 
+    width: 100px; 
+    top: 25%; 
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* active */
+
+.input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+@media  screen and (max-width: 767px) and (min-width: 576px){
+  #myModal{margin-left:20%;
+            margin-right:20%;}
+
+  #forgot-password{margin-left:20%;
+            margin-right:20%;}
+} 
+
+
+@media screen and (min-width: 768px) {
+    
+    #myModal .modal-dialog  {width:500px;}
+  
+  #forgot-password .modal-dialog{width:500px;}
+  
+  .modal-body{padding-left:50px;
+              padding-right:50px;}
+}
+
+
+.modal-body{background-image:url('http://res.cloudinary.com/rinma/image/upload/v1500489833/Airplane-flying-desktop-pictureproba2_rlcced.jpg');
+background-size:cover;
+z-inedx:4;}
+
+em{display:none;}
+
+
+
+/*--- Book section --*/
+
+/*--- End Book Section --*/
+
+/*---Features Section --*/
+
+.jumbotron {
+	margin-bottom: 0;
+	padding: 2rem 0 3.5rem;
+	border-radius: 0;
+}
+h3.heading {
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 1.9rem;
+}
+.heading-underline {
+	width: 3rem;
+	height: .2rem;
+	background-color: #1ebba3;
+	margin: 0 auto 2rem;
+}
+.feature svg.svg-inline--fa {
+	color: #1ebba3;
+}
+.feature h3 {
+	font-size: 1.3rem;
+	text-transform: upperccase;
+	padding-bottom: .4rem;
+}
+.feature p {
+	font-size: 1.1rem;
+}
+
+/*--- Contact Section --*/
+
+footer {
+	background-color: #40474e;
+	color: white;
+	padding: 2rem 0 2rem;
+	margin-top: 1rem;
+}
+footer img {
+	height: 3rem;
+	margin: 1.5rem 0;
+}
+footer a {
+	color: white;
+}
+footer svg.svg-inline--fa {
+	font-size: 1.6rem;
+	margin: 1.2rem .5rem 0 0;
+}
+footer svg.svg-inline--fa:hover {
+	color: #1ebba3!important
+}
+hr.socket {
+	width: 100%;
+	border-top: .2rem solid #666b71;
+	margin-top: 3rem;
+}
+
+/*--- Media Queries --*/
+
+@media (max-width: 767px) {
+	.caption h1 {
+	font-size: 2.3rem;
+	letter-spacing: .15rem;
+	padding-bottom: .5rem;
+}
+.caption h3 {
+	font-size: 1.2rem;
+	padding-bottom: 1.2rem;
+}
+.btn-lg {
+	padding: .5rem 1.2rem;
+	font-size: 1rem;
+}

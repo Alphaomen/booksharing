@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1">
+	<title>BookSharing</title>
+	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style1.css">
+	<link rel="stylesheet" href="css/fixed.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+
+<!--- Start Home Section -->
+<div id="home">
+
+<!--- Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#"><img src=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<i class="fas fa-users fa-4x"></i>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#home">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#books">Books</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#features">Features</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#search">Search</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#contact">Contact</a>
+			</li>
+			
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+		</ul>
+	</div>
+</nav>
+<!--- End navigation -->
+
+<!--- Start Landing Page Section -->
+<div class="landing">
+	<div class="home-wrap">
+		<div class="home-inner">
+		</div>
+    </div>
+</div>
+
+<div class="caption text-center">
+	<h1>Welcome to BookSharing</h1>
+	<h3>Read to understand!</h3>
+	<a class="btn btn-outline-light btn-lg" href="#books">Get Started</a>
+
+</div>
+<!--- End Landing Page Section -->
+</div>
+
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">LOGIN/REGISTER</a>
+</div>
+
+<!--- End Home Section -->
+
+<!--- Start Books Section -->
+<div id="books" class="offset">
+
+<div class="col-12 narrow text-center">
+	<h1>Latest Books</h1>
+
+<!-- Modal -->
+<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="The Pnume">The Pnume!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : The Pnume.<br>
+					AUTHOR : JACK VANCE.<br>
+					PUBLISHER NAME  : Ace Books.<br>
+					PUBLISHING NO.  : 00916.<br>
+					Description:The Pnume is a science fiction adventure novel by American writer Jack Vance.It tells of the efforts to return to Earth by the sole survivor of a human starship destroyed while investigating a mysterious signal from the distant planet Tschai. </strong>
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--- END MODAL -->
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="The Pnume">The Pnume</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal"><img src="img/1.jfif" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="The Pnume">
+						<a href="#" data-toggle="modal" data-target="#mymodal">Jack Vance</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="TOut Of Shadows!">Out Of Shadows!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : Out Of Shadows.<br>
+					AUTHOR : TIM Jopling.<br>
+					PUBLISHER NAME  : TIM.<br>
+					PUBLISHING NO.  : 1123.<br>
+					Description:  Nothing is ever what it seems...
+                                  Don't turn your back on anyone or anything... </strong>
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="Out Of The Shadows">Out Of The Shadows</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-1"><img src="img/3.jfif" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="Out Of The Shadows">
+						<a href="#" data-toggle="modal" data-target="#mymodal-1">Tim Jopling</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="Insidious Intent!">Insidious Intent!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : Insidious Intent.<br>
+					AUTHOR : Val McDermid.<br>
+					PUBLISHER NAME  : Atlantic monthly press.<br>
+					PUBLISHING NO.  : 00123.<br>
+					Description:  In the north of England, single women are beginning to disappear from weddings. A pattern soon become
+					              clear: Someone is crashing the festivities and luring the women away--only to leave the victims' bodies in their own burned-out cars in remote locations </strong>
+ 
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="Insidious Intent">Insidious Intents</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-2"><img src="img/6.jfif" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="Insidious Intent">
+						<a href="#" data-toggle="modal" data-target="#mymodal-2">Val McDermid</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="It Takes Death To Reach A Star!">It Takes Death To Reach A Star!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : It Takes Death To Reach A Star.<br>
+					AUTHOR : Stu Jones & Gareth Worthing.<br>
+					PUBLISHER NAME  : Vesuvian Books.<br>
+					PUBLISHING NO.  : 1100123.<br>
+					Description:  The epidemic struck at the end of the Third World War. Fighting over oil, power, and religion,governments ignored the rise of an anti-bacterial-resistant plague. In just five years, the Earth was annihilated. Only one city survived—Etyom—a frozen hell-hole in northern Siberia, engulfed in endless conflict. </strong>
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="It Takes Death To Reach A Star">It Takes Death To Reach A Star</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-3"><img src="img/8.jfif" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="It Takes Death To Reach A Star">
+						<a href="#" data-toggle="modal" data-target="#mymodal-3">Stu Jones & Gareth Worthing</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="Bright Dead Things!">Bright Dead Things!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : Bright Dead Things.<br>
+					AUTHOR : Ada Limon.<br>
+					PUBLISHER NAME  : Milkweed Editions.<br>
+					PUBLISHING NO.  : 19100123.<br>
+					Description:  Bright Dead Things examines the chaos that is life, the dangerous thrill of living in a world you know you have to leave one day, and the search to find something that is ultimately “disorderly, and marvelous, and ours.” </strong>
+
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="Bright Dead Things">Bright Dead Things</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-4"><img src="img/2.jpg" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="Bright Dead Things">
+						<a href="#" data-toggle="modal" data-target="#mymodal-4">Ada Limon</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-5" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="Red Wolf!">Red Wolf!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : Red Wolf.<br>
+					AUTHOR : Jennifer Dance.<br>
+					PUBLISHER NAME  : Dundurn.<br>
+					PUBLISHING NO.  : 009100123.<br>
+					Description:  In the late 1800s, both Native people and wolves are being forced from the land. Starving and lonely, an orphaned timber wolf is befriended by a boy named Red Wolf. But under the Indian Act, Red Wolf is forced to attend a residential school far from the life he knows, and the wolf is alone once more. Courage, love and fate reunite the pair, and they embark on a perilous journey home. But with winter closing in, will Red Wolf and Crooked Ear survive? And if they do, what will they find? </strong>
+
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="Red Wolf">Red Wolf</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-5"><img src="img/4.jpg" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="Red Wolf">
+						<a href="#" data-toggle="modal" data-target="#mymodal-5">Jennifer Dance</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-6" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="Think & Grow Rich!">Think & Grow Rich!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : Think & Grow Rich.<br>
+					AUTHOR : Napoleon Hill.<br>
+					PUBLISHER NAME  : The Ralston society.<br>
+					PUBLISHING NO.  : 000123.<br>
+					Description:  the author insists that his philosophy can help people succeed in any line of work, to do and be anything they can imagine. </strong>
+
+
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="Think & Grow Rich">Think & Grow Rich</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-6"><img src="img/5.jpg" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="Think & Grow Rich">
+						<a href="#" data-toggle="modal" data-target="#mymodal-6">Napoleon Hill</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-7" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="Homeland!">Homeland!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : Homeland.<br>
+					AUTHOR : Cory Doctorow.<br>
+					PUBLISHER NAME  : Tor Teen.<br>
+					PUBLISHING NO.  : 000123.<br>
+					Description:  In Cory Doctorow's wildly successful Little Brother, young Marcus Yallow was arbitrarily detained and brutalized by the government in the wake of a terrorist attack on San Francisco―an experience that led him to become a leader of the whole movement of technologically clued-in teenagers, fighting back against the tyrannical security state. </strong>
+
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="Homeland">Homeland</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-7"><img src="img/7.jpg" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="Homeland">
+						<a href="#" data-toggle="modal" data-target="#mymodal-7">Cory Doctorow</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-8" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="A World Without You!">A World Without You!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : A World Without Youf.<br>
+					AUTHOR : Beth Davis.<br>
+					PUBLISHER NAME  : Razor Bill.<br>
+					PUBLISHING NO.  : 123.<br>
+					Description:  What if finding her means losing himself?
+
+                                 Seventeen-year-old Bo has always had delusions that he can travel through time. When he was ten, Bo claimed to have witnessed the Titanic hit an iceberg, and at fifteen, he found himself on a Civil War battlefield, horrified by the bodies surrounding him. So when his worried parents send him to a school for troubled youth. </strong>
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="A World Without You">A World Without You</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-8"><img src="img/9.jpg" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="A World Without You">
+						<a href="#" data-toggle="modal" data-target="#mymodal-8">Beth Revis</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="modal fade" id="mymodal-9" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="The Crows Of Beara!">The Crows Of Beara!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	        <p>
+					<strong>TITLE  : The Crows Of Beara.<br>
+					AUTHOR : Julie Christian Johnson.<br>
+					PUBLISHER NAME  : Ashland Creek Press.<br>
+					PUBLISHING NO.  : 100123.<br>
+				                	Description:  When Annie Crowe travels from Seattle to a small Irish village to promote a new copper mine, her public relations career is hanging in the balance. Struggling to overcome her troubled past and a failing marriage, Annie is eager for a chance to rebuild her life. </strong>
+
+
+
+				</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+		<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center small">
+					<a href="#" title="The Crows Of Beara">The Crows Of Beara</a>
+
+					<div class="panel-body center-block"> <!--- Displaying the book images -->
+						<a href="#" data-toggle="modal" data-target="#mymodal-9"><img src="img/10.jpg" width='100' height='150' class='center-block'></a>
+					</div>
+					<div class="panel-footer text-center small" title="The Crows Of Beara">
+						<a href="#" data-toggle="modal" data-target="#mymodal-9">Julie Christian Johnson</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<!--- End Books Section -->
+
+<!--- Start Feature Section -->
+<div id="feature" class="offset">
+
+<!--- Start Jumbotron -->
+<div class="jumbotron">
+<div class="narrow text-center">
+
+	<div class="col-12">
+	    <h3 class="heading">Features</h3>
+		<div class="heading-underline"></div>
+    </div>
+
+    <div class="row text-center">
+
+    	<div class="col-md-4">
+    		<div class="feature">
+    			<i class="fas fa-book fa-4x"></i>
+    			<h3>1.Register</h3>
+    			<p>To start Register or Login in</p>
+    			<a href="btn btn-secondary btn-md" href="#" target="_blank">Register</a>
+    		</div>
+    	</div>
+
+<div class="modal fade" id="mymodal-11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Books</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form3" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form3">Your name</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form2" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form2">Your email</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Add your books Here</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-indigo">ADD <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+    	<div class="col-md-4">
+    		<div class="feature">
+    			<i class="fas fa-swatchbook fa-4x"></i>
+    			<h3>2.Add Books</h3>
+    			<p>Add your favorite books</p>
+    			<a href="#" data-toggle="modal" data-target="#mymodal-11">Add Books</a>
+    		</div>
+    	</div>
+
+<div class="modal fade" id="mymodal-10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Borrow</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form3" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form3">Your name</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form2" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form2">Your email</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Type of genre</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-indigo">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    	<div class="col-md-4">
+    		<div class="feature">
+    			<i class="fas fa-users fa-4x"></i>
+    			<h3>3.Borrow</h3>
+    			<p>Approve or request to lend out a book.</p>
+    			<a href="#" data-toggle="modal" data-target="#mymodal-10">Borrow</a>
+    		</div>
+    	</div>
+    
+    </div> <!--- End Row -->
+
+</div> <!--- End Narrow -->
+</div> <!--- End Jumbotron -->
+
+</div>
+<!--- End Feature Section -->
+
+<!--- Start Search Section -->
+<div id="search" class="offset">
+
+</div>
+<!--- End Search Section -->
+
+<!--- Start Contact Section -->
+<div id="contact" class="offset">
+
+<footer>
+<div class="row justify-content-center">
+
+	<div class="col-md-5 text-center">
+		<i class="fas fa-users fa-4x"></i>
+		<p>Spend less. Read more books...
+How is that possible? By sharing your paper books with friends and family you save money, save trees and read more books. Join today and make the impossible possible.</p>
+        <strong>Contact Info</strong>
+        <p>(+254) 7xxxxxxx<br>email.booksharing.com</p>
+        <a href="" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+        <a href="" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+	</div>
+
+	<hr class="socket">
+	&copy; Copyright@Booksharing.
+
+</div>
+</footer>
+
+</div>
+<!--- End Contact Section -->
+
+
+<!--- Script Source Files -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<!--- End of Script Source Files -->
+
+</body>
+</html>	
